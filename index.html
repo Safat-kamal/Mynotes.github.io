@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+    <title>Magic Notes</title>
+    <style>
+        * {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .markcard{
+            border: 1px solid #dc3545;
+        }
+        .mark{
+            width:100px;
+            float: right;
+            background-color:#dc3545;
+            color: #fff;
+            padding:3px;
+            font-size: 0.9em;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Notes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search....." aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    <!-- content -->
+    <div class="container">
+        <!-- add notes -->
+        <div class="row">
+            <div class="col-9 mx-auto mt-5">
+                <h1 class="text-primary mb-3">Welcome to Magic Notes</h1>
+                <div class="bg-light">
+                    <form class="was-validated p-3">
+                        <h4 class="text-primary">Add Notes</h4>
+                        <div class="mb-3">
+                            <input class="form-control is-invalid" id="validationinput" placeholder="Write your notes's Title......" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Write your notes......" rows="5" cols="40" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button class="btn btn-primary px-4" type="button" id="addbtn">Add </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- add notes end -->
+        <div class="shownotes mb-5">
+            <div class="row">
+                <div class="col-9 mx-auto mt-4">
+                    <hr>
+                    <h4 class="text-primary">Your Notes</h4>
+                    <hr>
+                    <div id="shownote" class="row container-fluid mx-auto">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><br><br><br><br><br><br>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
